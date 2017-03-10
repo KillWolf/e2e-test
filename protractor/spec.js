@@ -19,12 +19,12 @@ describe('Protractor Demo App', function() {
     browser.get('https://killwolf.github.io/e2e-test/');
   });
 
-    it('should add to the list') {
+    it('should add to the list', function() {
       add('Be a better man', '2 days');
       add('Be a better bf', '1 month');
 
       expect(history.last().getText()).toContain('Be a better man', '2 days');
-    }
+    });
 
 
   
