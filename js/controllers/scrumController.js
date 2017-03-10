@@ -7,8 +7,7 @@ function scrumController() {
 	vm.goalitem = '';
 	vm.goal = '';
 
-
-	vm.todo = [
+	/*
 	{
 		goalitem: 'bas',
 		goal: 'lære alle toner',
@@ -29,6 +28,11 @@ function scrumController() {
 		goalitem: 'kodning',
 		goal: 'freecodecamp finish'
 	}
+	*/
+
+
+	vm.todo = [
+	
 	]
 
 	function submitToList() {

@@ -1,5 +1,39 @@
 // spec.js
 describe('Protractor Demo App', function() {
+  
+
+
+
+  var firstVar = element(by.model('sCtrl.goalitem'))
+  var secondVar = element(by.model('sCtrl.goal'));
+  var submitButton = element(by.id('clickAction'));
+  var history = element.all(by.repeater('todo in sCtrl.todo'))
+
+  function submit(a, b) {
+    firstVar.sendKeys(a);
+    secondVar.sendKeys(b);
+    submitButton.click();
+  }
+
+    beforeEach(function() {
+    browser.get('https://killwolf.github.io/e2e-test/');
+  });
+
+    it('should add to the list') {
+      add('Be a better man', '2 days');
+      add('Be a better bf', '1 month');
+
+      expect(history.last().getText()).toContain('Be a better man', '2 days');
+    }
+
+
+  
+
+});
+
+/*
+// spec.js
+describe('Protractor Demo App', function() {
   var firstNumber = element(by.model('first'));
   var secondNumber = element(by.model('second'));
   var goButton = element(by.id('gobutton'));
@@ -24,4 +58,4 @@ describe('Protractor Demo App', function() {
     expect(history.first().getText()).toContain(7); // This is wrong!
   });
 
-});
+}); */
