@@ -1,0 +1,41 @@
+<html ng-app="mainApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Personal scrum</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+</head>
+<body ng-controller="scrumController as sCtrl">
+
+
+<div class="container-fluid">
+<button class="btn btn-primary" ng-click="sCtrl.submitToList()">je</button>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1 class="title">Personal scrums</h1>
+	</div>
+</div>
+<form ng-submit="sCtrl.submitToList()">
+	<label>Goal item<input class="inputfields" type="text" ng-model="sCtrl.goalitem"></label>
+	<label>Goal<input class="inputfields" type="text" ng-model="sCtrl.goal"></label>
+	<button class="btn" type="submit" value="submit">submit</button>
+</form>
+	<div class="row">
+		<div class="col-md-8">
+			<ul>
+			<li ng-repeat="todo in sCtrl.todo">{{todo.goalitem}}, {{todo.goal}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- scripts -->
+<script src="js/app.js"></script>
+<script src="js/controllers/scrumController.js"></script>
+
+	
+</body>
+</html>
