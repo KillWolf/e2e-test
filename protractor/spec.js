@@ -20,8 +20,8 @@ describe('Protractor Demo App', function() {
   });
 
     it('should add to the list', function() {
-      add('Be a better man', '2 days');
-      add('Be a better bf', '1 month');
+      submit('Be a better man', '2 days');
+      submit('Be a better bf', '1 month');
 
       expect(history.last().getText()).toContain('Be a better man', '2 days');
     });

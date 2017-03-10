@@ -12,7 +12,6 @@
 
 
 <div class="container-fluid">
-<button class="btn btn-primary" ng-click="sCtrl.submitToList()">je</button>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<h1 class="title">Personal scrums</h1>
@@ -21,7 +20,7 @@
 <form ng-submit="sCtrl.submitToList()">
 	<label>Goal item<input class="inputfields" type="text" ng-model="sCtrl.goalitem"></label>
 	<label>Goal<input class="inputfields" type="text" ng-model="sCtrl.goal"></label>
-	<button class="btn" type="submit" value="submit">submit</button>
+	<button class="btn" type="submit" id="clickAction" value="submit">submit</button>
 </form>
 	<div class="row">
 		<div class="col-md-8">
